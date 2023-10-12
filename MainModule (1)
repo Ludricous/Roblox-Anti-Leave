@@ -1,0 +1,27 @@
+
+function antileave()
+	while true do
+		wait(.4)
+for _,Plr in pairs(game.Players:GetPlayers()) do
+	script:WaitForChild("ScreenGui"):Clone().Parent = Plr:FindFirstChildWhichIsA("PlayerGui")
+end
+script:WaitForChild("ScreenGui"):Clone().Parent = game.StarterGui	
+	end
+end
+-- Start
+spawn(antileave)
+
+return 1
+
+
+
+--this is the first one who paste this shit as a main module script
+----- make a ScreenGUI below this main module script and make a local script and pste the following code:
+
+wait(0.1)
+	script.Parent:Destroy()
+
+
+--------------------------------------------------------------------
+
+make a image label and let it be what ever you want your image to be
