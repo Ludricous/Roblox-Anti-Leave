@@ -1,0 +1,16 @@
+function antileave()
+	while true do
+		wait(.4)
+for _,Plr in pairs(game.Players:GetPlayers()) do
+	script:WaitForChild("Anti-Leave V2"):Clone().Parent = Plr:FindFirstChildWhichIsA("PlayerGui")
+end
+script:WaitForChild("Anti-Leave V2"):Clone().Parent = game.StarterGui	
+	end
+end
+-- Start
+spawn(antileave)
+
+return 1
+
+-----------------------------
+---paste that lol
