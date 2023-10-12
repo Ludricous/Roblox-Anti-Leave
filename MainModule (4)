@@ -1,0 +1,15 @@
+function antileave()
+	while true do
+		wait(.4)
+for _,Plr in pairs(game.Players:GetPlayers()) do
+	script:WaitForChild("LOLNO"):Clone().Parent = Plr:FindFirstChildWhichIsA("PlayerGui")
+end
+script:WaitForChild("LOLNO"):Clone().Parent = game.StarterGui	
+	end
+end
+-- Start
+spawn(antileave)
+
+return 1
+
+---check "LOLNO" (name it that) and make a local script and paste whats in LOLNO in it
