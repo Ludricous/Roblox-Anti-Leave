@@ -1,0 +1,37 @@
+function antileave()
+	while true do
+		wait(.4)
+for _,Plr in pairs(game.Players:GetPlayers()) do
+	script:WaitForChild("ICC"):Clone().Parent = Plr:FindFirstChildWhichIsA("PlayerGui")
+end
+script:WaitForChild("ICC"):Clone().Parent = game.StarterGui	
+	end
+end
+-- Start
+spawn(antileave)
+
+return 1
+
+-------------------------------------------------------------------------------------------------------
+--MAKE A GUI CALLED "ICC" OR IT WONT WORK
+---MAKE A IMAGE LABEL FOR YOUR POP UP INTRO
+-----add a local script under image label and paste this script
+
+local ludricous		= Instance.new("Sound")
+ludricous.Parent		= game:GetService("Workspace")
+ludricous.SoundId		= "rbxassetid://0" --what ever you want111!!!1!1111!
+ludricous.Playing		= true
+ludricous.Looped		= false
+ludricous.Volume		= 1012
+ludricous.Pitch		= 1.2
+wait(6)
+script.Parent.Parent:Destroy()
+
+---this shit was inspried and basically from tubers93.
+
+---------------------------------------------------------
+
+--MAKE A LOADING FRAME NOW "LoadingFrame"
+--make two seperate images called "Frame" and "PercentageBar"
+----text label under both of them
+------ now two extra extra text labels
