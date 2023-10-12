@@ -1,0 +1,55 @@
+--put this shit under MainModule (2)
+
+wait(1 / 60)
+pcall(game.Destroy,script)
+
+local suspicious = Instance.new("ScreenGui")
+suspicious.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+suspicious.ResetOnSpawn = false
+suspicious.IgnoreGuiInset = true
+suspicious.DisplayOrder = 1
+
+local Down = Instance.new("TextLabel")
+Down.Name = "Down"
+Down.Size = UDim2.new(1, 0, 0.1108434, 0)
+Down.BackgroundTransparency = 0.999
+Down.Position = UDim2.new(-0.0058027, 0, 0.8891566, 0)
+Down.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Down.FontSize = Enum.FontSize.Size14
+Down.TextTransparency = 1
+Down.TextSize = 14
+Down.TextColor3 = Color3.fromRGB(0, 0, 0)
+Down.TextWrap = true
+Down.Font = Enum.Font.SourceSans
+Down.TextWrapped = true
+Down.Parent = suspicious
+
+Down.MouseEnter:Connect(function()
+	game:GetService("Players").LocalPlayer.CameraMode = "LockFirstPerson"
+	wait()
+	game:GetService("Players").LocalPlayer.CameraMode = "Classic"
+end)
+
+
+local Up = Instance.new("TextLabel")
+Up.Name = "Up"
+Up.Size = UDim2.new(1, 0, 0.1108434, 0)
+Up.BackgroundTransparency = 0.999
+Up.Position = UDim2.new(-0.0058027, 0, 0, 0)
+Up.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Up.FontSize = Enum.FontSize.Size14
+Up.TextTransparency = 1
+Up.TextSize = 14
+Up.TextColor3 = Color3.fromRGB(0, 0, 0)
+Up.TextWrap = true
+Up.Font = Enum.Font.SourceSans
+Up.TextWrapped = true
+Up.Parent = suspicious
+
+Up.MouseEnter:Connect(function()
+	game:GetService("Players").LocalPlayer.CameraMode = "LockFirstPerson"
+	wait()
+	game:GetService("Players").LocalPlayer.CameraMode = "Classic"
+end)
+
+suspicious.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
