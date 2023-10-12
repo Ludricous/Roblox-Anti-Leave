@@ -15,7 +15,7 @@ return 1
 
 
 --this is the first one who paste this shit as a main module script
------ make a ScreenGUI below this main module script and make a local script and pste the following code:
+-----make a ScreenGUI below this main module script and make a local script and pste the following code:
 
 wait(0.1)
 	script.Parent:Destroy()
@@ -23,4 +23,4 @@ wait(0.1)
 
 --------------------------------------------------------------------
 
-make a image label and let it be what ever you want your image to be
+----make a image label and let it be what ever you want your image to be
